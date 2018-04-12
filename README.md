@@ -6,7 +6,7 @@
         wxml结构文件
         wxss样式文件
 
-    逻辑层js:
+    逻辑层js：
         数据
         交互
 
@@ -146,12 +146,12 @@ index.js
 **setData函数**
 在事件绑定中常常会使用setData函数，这个函数非常重要，它是函数用于将数据从逻辑层发送到视图层，同时改变对应的this.data值
 
-setData()参数格式： 
-接受一个对象，以key,value的形式
+setData()参数格式：
+接受一个对象，以key，value的形式
 
 注意：直接修改 this.data 而不调用 this.setData 是无法改变页面的状态的，还会造成数据不一致
 
-lists.wxml:
+lists.wxml：
 ```javascript
 <scroll-view scroll-y="true">
 	<block wx:for="{{lists}}">
@@ -163,7 +163,7 @@ lists.wxml:
 </scroll-view>
 ```
 
-index.js:
+index.js：
 ```javascript
 Page({
     data:{
@@ -210,7 +210,7 @@ function initData(page){
 ```
 
 **模块化**
-可以将一些公共的代码抽离成为一个单独的js文件，作为一个模块。模块只有通过module.exports或者 exports才能对外暴露接口。
+可以将一些公共的代码抽离成为一个单独的 js 文件，作为一个模块。模块只有通过 module.exports 或者 exports 才能对外暴露接口。
 ```javascript
 const formatTime = date => {
   const year = date.getFullYear()
