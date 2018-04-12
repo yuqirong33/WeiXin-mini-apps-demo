@@ -52,9 +52,81 @@
         
 * 微信小程序API地址：           
 	* https://developers.weixin.qq.com/miniprogram/document/render/canvas/createCanvas.html?t=201812      
-	
-     
-**逻辑层js写法**
+
+## 视图层WXML写法                       
+WXML中的动态数据均来自对应Page的data 
+
+1.内容                
+index.wxml:        
+```javascript
+<view>{{message}}</view>
+```     
+
+index.js:                   
+```javascript
+Page({
+  data: {
+     message:"hello"  
+    }
+
+})
+```   	
+
+2.组件属性、控制属性、关键字（都需要在引号之内）       
+index.wxml:       
+```javascript
+<view wx:if="{{condition}}">hello </view>
+```
+
+index.js:       
+```javascript
+Page({
+  data: {
+    condition: false
+  }
+})
+```
+
+**运算**       
+包括算术运算、逻辑判断、字符串计算、数据路径计算等。          
+index.wxml:       
+```javascript
+<view wx:if="{{a>5}}">{{a}}</view>
+```
+
+index.js:            
+```javascript
+Page({
+   data:{
+     a:10
+   }
+})
+```
+
+**列表渲染**       
+* wx:for       
+for循环，循环数组         
+注意：使用wx:for-index和wx:for-item指定数组当前下标的变量名和元素名，因为一个页面很可能会用到多个wx:for     
+
+index.wxml:
+```javascript
+<view wx:for="{{array}}" wx:for-index="indexName" wx:for-item="itemName">
+  {{indexName}}:{{itemName.message}}
+</view>
+
+```
+
+index.js:  
+```javascript   
+Page({
+  data: {
+    array:[{message:'foo'},{message:'bar'}]
+  }
+})
+```    
+
+    
+## 逻辑层JavaScript写法        
 ```javascript
 Page({
 
