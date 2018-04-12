@@ -13,7 +13,7 @@
 * 工作原理：                             
     * 数据的双向绑定              
     * 用户在视图上的修改会自动同步到数据模型中去         
-    * 数据模型中的值发生了变化，也会立刻同步到视图中 /<br>         
+    * 数据模型中的值发生了变化，也会立刻同步到视图中 \<br>          
 
 
 **使用小程序：**        
@@ -51,7 +51,7 @@
     
         
 * 微信小程序API地址：           
-	* https://developers.weixin.qq.com/miniprogram/document/render/canvas/createCanvas.html?t=201812      
+	* https://developers.weixin.qq.com/miniprogram/document/render/canvas/createCanvas.html?t=201812  \<br>     
 	
      
 **逻辑层js写法**
@@ -122,9 +122,9 @@ Page({
   }
 })
 ```
-        
+  \<br>       
 **事件处理函数**  
-事件处理函数主要是在渲染层的组件加入绑定，当触发事件时，就会执行Page中定义的事件处理函数                  
+事件处理函数主要是在渲染层的组件加入绑定，当触发事件时，就会执行Page中定义的事件处理函数  \<br>                 
 
 **事件绑定函数的例子：**                    
 index.wxml                  
@@ -143,7 +143,7 @@ Page({
 })
 ```
 
-
+\<br> 
 **setData函数**                        
 在事件绑定中常常会使用setData函数，这个函数非常重要，它是函数用于将数据从逻辑层发送到视图层，同时改变对应的this.data值                 
 
@@ -209,7 +209,7 @@ function initData(page){
 }
 
 ```
-
+\<br> 
 **模块化**       
 可以将一些公共的代码抽离成为一个单独的 js 文件，作为一个模块。模块只有通过 module.exports 或者 exports 才能对外暴露接口            
 ```javascript
