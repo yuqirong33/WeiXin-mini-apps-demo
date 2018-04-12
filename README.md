@@ -6,7 +6,7 @@
         wxml结构文件
         wxss样式文件
 
-    逻辑层javascript:
+    逻辑层js:
         数据
         交互
 
