@@ -2,56 +2,56 @@
 **小程序是什么：运行在微信里的app**
 
 **组成结构**
-视图层wxml：
-   wxml结构文件
-   wxss样式文件
+视图层wxml：＜/br＞
+   wxml结构文件＜/br＞
+   wxss样式文件＜/br＞
 
-逻辑层js：
-   数据
-   交互
+逻辑层js：＜/br＞
+   数据＜/br＞
+   交互＜/br＞
 
-工作原理：
-    数据的双向绑定
-    用户在视图上的修改会自动同步到数据模型中去
-    数据模型中的值发生了变化，也会立刻同步到视图中
+工作原理：＜/br＞
+    数据的双向绑定＜/br＞
+    用户在视图上的修改会自动同步到数据模型中去＜/br＞
+    数据模型中的值发生了变化，也会立刻同步到视图中＜/br＞
 
 
-使用小程序：
-1.安装小程序：微信开发者工具
-    1）登录微信公众号
-    2）进入小程序平台找到工具下载
-        地址：mp.weixin.qq.com/debug/wxadoc/devtools/download.html
+使用小程序：＜/br＞
+1.安装小程序：微信开发者工具＜/br＞
+    1）登录微信公众号＜/br＞
+    2）进入小程序平台找到工具下载＜/br＞
+        地址：mp.weixin.qq.com/debug/wxadoc/devtools/download.html＜/br＞
 
-2.安装完成新建项目
-    1）项目地址
-    2）项目名称
-    3）AppID(需要实名注册获取) 
-        注册完了之后再微信公众号中的设置开发设置可以看得到AppID码
-        如果不注册的话不设置AppID那么有些功能会受限制，比如验证啥的
+2.安装完成新建项目＜/br＞
+    1）项目地址＜/br＞
+    2）项目名称＜/br＞
+    3）AppID(需要实名注册获取) ＜/br＞
+        注册完了之后再微信公众号中的设置开发设置可以看得到AppID码＜/br＞
+        如果不注册的话不设置AppID那么有些功能会受限制，比如验证啥的＜/br＞
 
-3.新建后的项目中包含：
-    app.js
-    app.json   //配置文件  
-        pages  //是放哪些页面
-        window //小程序的页面设置
-    app.wxss   //全局样式
-    pages文件夹包含：
-        页面组成：
-            样式文件   //指定页面样式
-            结构文件   //指定页面的结构html
-            逻辑文件   //数据处理  模块处理  指定页面的生命周期函数进行监听   
-            JSON文件  //指定页面的配置  标题  背景颜色
-    utils文件包含：
-        不是必须的文件，可以取其他名字
-        util.js
-            用来提供接口 ES6  导出函数  用于模块化开发  
-            初始化生成的代码是一个时间转换的模块，用来格式化的时间（包含时间戳的转换、补零函数、导出函数）
-            需要使用这个函数时那么引用该模块  
-                let time = require("../../utils/util");  //引用模块
+3.新建后的项目中包含：＜/br＞
+    app.js＜/br＞
+    app.json   //配置文件  ＜/br＞
+        pages  //是放哪些页面＜/br＞
+        window //小程序的页面设置＜/br＞
+    app.wxss   //全局样式＜/br＞
+    pages文件夹包含：＜/br＞
+        页面组成：＜/br＞
+            样式文件   //指定页面样式＜/br＞
+            结构文件   //指定页面的结构html＜/br＞
+            逻辑文件   //数据处理  模块处理  指定页面的生命周期函数进行监听   ＜/br＞
+            JSON文件  //指定页面的配置  标题  背景颜色＜/br＞
+    utils文件包含：＜/br＞
+        不是必须的文件，可以取其他名字＜/br＞
+        util.js＜/br＞
+            用来提供接口 ES6  导出函数  用于模块化开发 ＜/br＞ 
+            初始化生成的代码是一个时间转换的模块，用来格式化的时间（包含时间戳的转换、补零函数、导出函数）＜/br＞
+            需要使用这个函数时那么引用该模块  ＜/br＞
+                let time = require("../../utils/util");  //引用模块  ＜/br＞
     
         
-微信小程序API地址：
-	https://developers.weixin.qq.com/miniprogram/document/render/canvas/createCanvas.html?t=201812
+微信小程序API地址：＜/br＞
+	https://developers.weixin.qq.com/miniprogram/document/render/canvas/createCanvas.html?t=201812＜/br＞
 	
      
 ** 逻辑层js写法 **
@@ -127,7 +127,7 @@ Page({
 事件处理函数主要是在渲染层的组件加入绑定，当触发事件时，就会执行Page中定义的事件处理函数  
 
 **事件绑定函数的例子：** 
-index.wxml   
+index.wxml   ＜/br＞
 bindtap="" 默认是冒泡的事件 
 ```javascript
 <view bindtap="viewTap"> 点我 </view>
@@ -144,14 +144,14 @@ Page({
 
 
 **setData函数**
-在事件绑定中常常会使用setData函数，这个函数非常重要，它是函数用于将数据从逻辑层发送到视图层，同时改变对应的this.data值
+在事件绑定中常常会使用setData函数，这个函数非常重要，它是函数用于将数据从逻辑层发送到视图层，同时改变对应的this.data值＜/br＞
 
-setData()参数格式：
-接受一个对象，以key，value的形式
+setData()参数格式：＜/br＞
+接受一个对象，以key，value的形式＜/br＞
 
-注意：直接修改 this.data 而不调用 this.setData 是无法改变页面的状态的，还会造成数据不一致
+注意：直接修改 this.data 而不调用 this.setData 是无法改变页面的状态的，还会造成数据不一致＜/br＞
 
-lists.wxml：
+lists.wxml：＜/br＞
 ```javascript
 <scroll-view scroll-y="true">
 	<block wx:for="{{lists}}">
@@ -163,7 +163,7 @@ lists.wxml：
 </scroll-view>
 ```
 
-index.js：
+index.js：＜/br＞
 ```javascript
 Page({
     data:{
@@ -210,7 +210,7 @@ function initData(page){
 ```
 
 **模块化**
-可以将一些公共的代码抽离成为一个单独的 js 文件，作为一个模块。模块只有通过 module.exports 或者 exports 才能对外暴露接口。
+可以将一些公共的代码抽离成为一个单独的 js 文件，作为一个模块。模块只有通过 module.exports 或者 exports 才能对外暴露接口。＜/br＞
 ```javascript
 const formatTime = date => {
   const year = date.getFullYear()
@@ -234,7 +234,7 @@ module.exports = {
 
 ```
 
-在需要使用这些模块的文件中，使用require(path)将公共代码引入
+在需要使用这些模块的文件中，使用require(path)将公共代码引入＜/br＞
 ```javascript
 let time = require("../../utils/util");
 ```
