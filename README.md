@@ -54,7 +54,7 @@
 	https://developers.weixin.qq.com/miniprogram/document/render/canvas/createCanvas.html?t=201812
 	
      
-## 逻辑层js写法
+** 逻辑层js写法 **
 ```javascript
 Page({
 
@@ -127,19 +127,19 @@ Page({
 事件处理函数主要是在渲染层的组件加入绑定，当触发事件时，就会执行Page中定义的事件处理函数  
 
 **事件绑定函数的例子：** 
-index.wxml  
+index.wxml   
+bindtap="" 默认是冒泡的事件 
 ```javascript
-    <!---bindtap="" 默认是冒泡的事件--->
-	<view bindtap="viewTap"> 点我 </view>
+<view bindtap="viewTap"> 点我 </view>
 ```
 
 index.js
 ```javascript
-	Page({
-	  viewTap(){   
-		console.log('viewTap ===>');
-	  }
-	})
+Page({
+  viewTap(){   
+	console.log('viewTap ===>');
+  }
+})
 ```
 
 
