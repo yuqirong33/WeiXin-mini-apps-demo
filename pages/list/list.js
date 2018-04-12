@@ -1,4 +1,4 @@
-var time = require("../../utils/util");
+let time = require("../../utils/util");
 
 Page({
     data:{
@@ -18,7 +18,7 @@ Page({
     },
     edit(e){
         console.log('edit ===>')
-        var id = e.currentTarget.dataset.id;
+        let id = e.currentTarget.dataset.id;
         console.log(id)
         wx.navigateTo({
             url:"../add/add?id=" + id
@@ -33,10 +33,10 @@ Page({
 })
 
 function initData(page){
-    var arr = wx.getStorageSync('txt');
+    let arr = wx.getStorageSync('txt');
     if(arr.length){
         arr.forEach((item,i) => {
-            var t = new Date(Number(item.time));
+            let t = new Date(Number(item.time));
             item.time = time.formatTime(t);
         })
         page.setData({

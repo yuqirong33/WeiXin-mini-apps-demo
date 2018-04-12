@@ -3,7 +3,7 @@ Page({
 
     },
     onLoad(e){
-        var id = e.id;
+        let id = e.id;
         //console.log(id)
         if(id){
             getData(id,this);
@@ -14,7 +14,7 @@ Page({
         }
     },
     change(e){
-       var val = e.detail.value;
+       let val = e.detail.value;
        console.log(val);
        this.setData({
            content:val
@@ -24,7 +24,7 @@ Page({
         wx.navigateBack()
     },
     sure(){
-       var re = /^\s*$/g;
+       let re = /^\s*$/g;
        if(!this.data.content || re.test(this.data.content)){
            return;
        } 
@@ -37,7 +37,7 @@ Page({
 })
 
 function getData(id,page){
-    var arr = wx.getStorageSync('txt');
+    let arr = wx.getStorageSync('txt');
     if(arr.length){
         arr.forEach((item)=>{
             if(item.id == id){
@@ -51,8 +51,8 @@ function getData(id,page){
 }
 
 function setValue(page){
-    var arr = wx.getStorageSync('txt');
-    var data = [],flag = true;
+    let arr = wx.getStorageSync('txt');
+    let data = [],flag = true;
     if(arr.length){
         arr.forEach((item) => {
             if(item.id == page.data.id){
