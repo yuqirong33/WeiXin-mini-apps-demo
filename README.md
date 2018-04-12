@@ -1,4 +1,4 @@
-# WeiXin-mini-apps-domes  小程序-domes
+# WeiXin-mini-apps-demo  小程序-demo
 **小程序是什么：运行在微信里的app**
 
 **组成结构**
